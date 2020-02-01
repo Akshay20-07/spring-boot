@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/courses" xmlns:tns="http://www.example.org/courses" elementFormDefault="qualified">
+	<element name="GetCourseDetailsRequest">
+		<complexType>
+			<sequence>
+				<element name="id" type="int"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="GetCourseDetailsResponse">
+		<complexType>
+			<sequence>
+				<element name="CourseDetails" type="tns:CourseDetails"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="CourseDetails">
+		<sequence>
+			<element name="id" type="int"></element>
+			<element name="name" type="string"></element>
+			<element name="description" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>
+
+
+<!-- <GetCourseDetailsRequest xmlns="http://www.example.org/course-details">
+	<id>123</id>
+</GetCourseDetailsRequest> -->
